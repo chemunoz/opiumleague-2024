@@ -1,0 +1,20 @@
+<!-- Shields -->
+<div class="jumbotron">
+  <section class="container-fluid">
+    <div class="trans-background">XII OPIUM INFICAN VIAJES</div>
+    <div
+      id="countdowns"
+      class="trans-background mt-3"
+      style="color: #000"
+    ></div>
+    <div class="trans-background mt-3 py-3 text-center">
+      @for (player of homePlayers; track $index) {
+      <img
+        class="shield"
+        src="assets/images/shields/150/{{ player.images.shield }}"
+        [alt]="player.team"
+      />
+      }
+    </div>
+  </section>
+</div>
