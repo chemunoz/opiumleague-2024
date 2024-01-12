@@ -22,8 +22,12 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
+      "@components/*": ["app/components/*"],
+      "@directives/*": ["app/directives/*"],
+      "@interceptors/*": ["app/interceptors/*"],
       "@interfaces/*": ["app/interfaces/*"],
       "@pages/*": ["app/pages/*"],
+      "@pipes/*": ["app/pipes/*"],
       "@services/*": ["app/services/*"]
     }
   },

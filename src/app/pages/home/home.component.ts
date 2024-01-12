@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '@interfaces/player';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { DataService } from '@services/data.service';
+import { DataService } from '@services/data/data.service';
 import { tap } from 'rxjs';
 
 @UntilDestroy()
