@@ -1,29 +1,23 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Player } from '@interfaces/player';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { DataService } from '@services/data/data.service';
-import { tap } from 'rxjs';
+import { Observable } from 'rxjs';
 
-@UntilDestroy()
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  public players: Player[] = [];
+  public readonly title = 'XII OPIUM INFICAN VIAJES';
+  public players$ = new Observable<Player[]>();
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService
-      .getData()
-      .pipe(
-        untilDestroyed(this),
-        tap((players) => (this.players = players))
-      )
-      .subscribe();
+    this.players$ = this.dataService.getData();
   }
 }
