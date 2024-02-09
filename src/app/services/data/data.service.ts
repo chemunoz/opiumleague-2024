@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
+  /**
+   * Data source (temporal)
+   */
   private readonly dataUrl = 'assets/data/data.json';
 
   constructor(private http: HttpClient) {}

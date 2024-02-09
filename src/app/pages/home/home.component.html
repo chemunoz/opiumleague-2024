@@ -1,13 +1,7 @@
-<!-- Shields -->
 <div class="jumbotron">
   <section class="container-fluid">
-    <div class="trans-background">{{ title }}</div>
-    <div
-      id="countdowns"
-      class="trans-background mt-3"
-      style="color: #000"
-    ></div>
-    <div class="trans-background mt-3 py-3 text-center">
+    <div class="bg-trans">{{ title }}</div>
+    <div class="bg-trans mt-3 py-3 text-center">
       @for (player of (players$ | async); track $index) {
       <img
         class="shield"
