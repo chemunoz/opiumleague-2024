@@ -19,4 +19,8 @@ describe('SpinnerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('isLoading$ should be defined', () => {
+    expect(component.isLoading$).toBeDefined();
+  });
 });
